@@ -1,9 +1,10 @@
 import mongoose from 'mongoose';
 
 const CarroSchema = mongoose.Schema({
-    vin: { type: String, unique: true},
+    vin: { type: String, unique: true },
     make: String,
     model: String,
+    version: String,
     year: Number,
     engine: String,
     transmission: String,
