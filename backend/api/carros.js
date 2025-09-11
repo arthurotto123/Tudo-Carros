@@ -7,7 +7,7 @@ import Carro from "../models/Carro.js"; // Ajuste o caminho conforme sua estrutu
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+
 const MONGODB_URI = process.env.MONGODB_URI;
 
 // Middlewares
@@ -61,4 +61,9 @@ app.post("/carros", async (req, res) => {
 });
 
 // Iniciar servidor
-app.listen(PORT, () => console.log(`Servidor rodando em http://localhost:${PORT}`));
+// certo (Render define a porta automaticamente)
+const PORT = process.env.PORT || 3000; 
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Servidor rodando na porta ${PORT}`);
+});
+
