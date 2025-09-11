@@ -12,7 +12,9 @@ const MONGODB_URI = process.env.MONGODB_URI;
 
 // Middlewares
 
-app.use(cors());
+app.use(cors({
+  origin: "https://tudo-carros.vercel.app"
+}));
 
 app.use(express.json());
 
