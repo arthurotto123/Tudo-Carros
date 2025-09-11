@@ -3,7 +3,15 @@ const resultado = document.getElementById('resultado');
 
 formulario.addEventListener('submit', async (e) => {
     e.preventDefault();
-    resultado.innerHTML = 'Carregando...';
+    resultado.innerHTML = ''; // Limpa conteúdo antigo
+
+const svgImg = document.createElement("img");
+svgImg.src = "Tudo-Carros\imgs\loading.svg"; // caminho relativo ao arquivo HTML/JS
+svgImg.alt = "Carregando...";
+svgImg.width = 50; // opcional
+svgImg.height = 50; // opcional
+
+resultado.appendChild(svgImg);
 
     const make = document.getElementById('marca').value.trim();
     const model = document.getElementById('modelo').value.trim();
