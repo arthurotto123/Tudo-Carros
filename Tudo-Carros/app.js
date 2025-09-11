@@ -21,7 +21,7 @@ formulario.addEventListener('submit', async (e) => {
 
     try {
         const response = await fetch(url);
-        if (!response.ok) throw new Error('Erro na requisição: ' + response.status);
+        if (!response.ok) throw new Error('Veículo não encontrado: ' + response.status);
         const data = await response.json();
 
         if (!data || data.length === 0) {
