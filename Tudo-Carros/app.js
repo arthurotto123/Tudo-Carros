@@ -3,7 +3,7 @@ const resultado = document.getElementById('resultado');
 
 formulario.addEventListener('submit', async (e) => {
     e.preventDefault();
-    resultado.innerHTML = 'Carregando...';
+    resultado.innerHTML = <img src="Tudo-Carros\imgs\loading.svg" alt="Imagem de loading"/>;
 
     const make = document.getElementById('marca').value.trim();
     const model = document.getElementById('modelo').value.trim();
