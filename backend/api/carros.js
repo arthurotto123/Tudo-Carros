@@ -12,16 +12,7 @@ const MONGODB_URI = process.env.MONGODB_URI;
 
 // Middlewares
 
-const FRONTEND_URL = process.env.FRONTEND_URL || '*';
-
-// Permitir chamadas do frontend (em prod configure FRONTEND_URL)
-app.use(cors({
-  origin: (origin, callback) => {
-    if (!origin) return callback(null, true); // requests sem origin (ex: curl, Postman)
-    if (FRONTEND_URL === '*' || origin === FRONTEND_URL) return callback(null, true);
-    return callback(new Error('CORS not allowed by server'));
-  }
-}));
+app.use(cors());
 
 app.use(express.json());
 
