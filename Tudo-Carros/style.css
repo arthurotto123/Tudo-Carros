@@ -215,12 +215,13 @@ footer p {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 
 
   h3{
   font-size: 40px;
   font-weight: 700;
-  margin: 0 auto;
+  
 
   span{
     color: #1e40af;
@@ -232,7 +233,7 @@ footer p {
 p{
   font-size: 30px;
   font-weight: 400;
-  margin: 0 auto;
+  
 }
 
 }
