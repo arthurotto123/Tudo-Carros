@@ -21,14 +21,15 @@ mongoose.connect(MONGODB_URI)
 
 // Rotas
 app.get("/carros", async (req, res) => {
-  const { make, model, year } = req.query;
+  const { make, model, year, version } = req.query;
   if (!make || !model) return res.status(400).json({ error: "Informe marca e modelo" });
 
   try {
     const veiculos = await Carro.find({
       make: { $regex: `^${make}$`, $options: "i" },
       model: { $regex: `^${model}$`, $options: "i" },
-      ...(year && { year })
+      ...(year && { year }),
+      ...(version && { version: { $regex: `${version}$`, $options: "i"}})
     });
     return veiculos.length
       ? res.status(200).json(veiculos)
