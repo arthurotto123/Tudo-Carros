@@ -208,6 +208,27 @@ footer p {
   font-size: 14px;
   color: #666;
 }
+
+
+
+#mensagemh3{
+  font-size: 40px;
+  font-weight: 700;
+  margin: 0 auto;
+
+  span{
+    color: #1e40af;
+  }
+  
+}
+
+#mensagemp{
+  font-size: 30px;
+  font-weight: 400;
+  margin: 0 auto;
+}
+
+.
 @media (max-width: 1024px) {
   form input {
     width: 180px;
