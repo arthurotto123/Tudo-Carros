@@ -6,7 +6,7 @@ formulario.addEventListener('submit', async (e) => {
     resultado.innerHTML = ''; // Limpa conteúdo antigo
 
 const svgImg = document.createElement("img");
-svgImg.src = "Tudo-Carros\imgs\loading.svg"; // caminho relativo ao arquivo HTML/JS
+svgImg.src = "C:\Users\arthu\OneDrive\Área de Trabalho\Tudo-Carros\Tudo-Carros\imgs\loading.svg"; // caminho relativo ao arquivo HTML/JS
 svgImg.alt = "Carregando...";
 svgImg.width = 50; // opcional
 svgImg.height = 50; // opcional
