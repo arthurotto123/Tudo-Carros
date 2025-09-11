@@ -15,8 +15,7 @@ formulario.addEventListener('submit', async (e) => {
         return;
     }
 
-    let url = `https://https://tudo-carros.onrender.com
-/carros?make=${make}&model=${model}`;
+    let url = `https://tudo-carros.onrender.com/carros?make=${make}&model=${model}`;
     if (year) url += `&year=${year}`;
     if (version) url += `&version=${version}`;
 
