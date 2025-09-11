@@ -10,12 +10,13 @@ formulario.addEventListener('submit', async (e) => {
     const year = document.getElementById('ano').value.trim();
     const version = document.getElementById('version').value.trim();
 
-    if (!make || !model) {
-        resultado.innerHTML = '<p style="color:red;">Informe marca e modelo</p>';
+    if (!make) {
+        resultado.innerHTML = '<p style="color:red;">Informe marca</p>';
         return;
     }
 //c
-    let url = `https://tudo-carros.onrender.com/carros?make=${make}&model=${model}`;
+    let url = `https://tudo-carros.onrender.com/carros?make=${make}`;
+    if (model) url += `&model=${model}`;
     if (year) url += `&year=${year}`;
     if (version) url += `&version=${version}`;
 
