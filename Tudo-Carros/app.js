@@ -14,7 +14,7 @@ formulario.addEventListener('submit', async (e) => {
         resultado.innerHTML = '<p style="color:red;">Informe marca e modelo</p>';
         return;
     }
-
+//c
     let url = `https://tudo-carros.onrender.com/carros?make=${make}&model=${model}`;
     if (year) url += `&year=${year}`;
     if (version) url += `&version=${version}`;
