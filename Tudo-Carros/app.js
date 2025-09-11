@@ -29,6 +29,9 @@ formulario.addEventListener('submit', async (e) => {
             return;
         }
 
+        if (mensagemInicial) mensagemInicial.style.display = 'none';
+
+
         resultado.innerHTML = '';
         data.forEach(veiculo => {
             resultado.innerHTML += `
