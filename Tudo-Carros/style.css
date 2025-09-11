@@ -209,9 +209,12 @@ footer p {
   color: #666;
 }
 
+#mensagemInicial{
+  width: 100%;
+  margin-top: 50px;
 
 
-#mensagemh3{
+  h3{
   font-size: 40px;
   font-weight: 700;
   margin: 0 auto;
@@ -222,11 +225,18 @@ footer p {
   
 }
 
-#mensagemp{
+
+p{
   font-size: 30px;
   font-weight: 400;
   margin: 0 auto;
 }
+
+}
+
+
+
+
 
 
 @media (max-width: 1024px) {
